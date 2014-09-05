@@ -63,6 +63,9 @@ class monit::params {
             '12.10': {
               $default_conf_tpl = 'monit.default.conf.ubuntu.quantal.erb'
             }
+            '14.04': {
+              $default_conf_tpl = 'monit.default.conf.ubuntu.trusty.erb'
+            }            
             default: {
               fail("Unsupported lsbdistid:${::lsbdistid}/${::lsbdistrelease}")
             }
